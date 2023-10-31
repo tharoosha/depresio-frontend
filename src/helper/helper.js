@@ -18,7 +18,7 @@ export async function getUsername(){
 /** authenticate function */
 export async function authenticate(username){
     try {
-        return await axios.post(`${process.env.REACT_APP_SERVER_ENDPOINT}/authenticate`, { username })
+        return await axios.post(`${process.env.REACT_APP_SERVER_ENDPOINT}/api/authenticate`, { username })
     } catch (error) {
         return { error : "Username doesn't exist...!"}
     }
